@@ -148,20 +148,6 @@
 
 
     <script>
-        const hour = new Date().getHours();
-
-        let message;
-
-        if (hour < 12) {
-            message = "☀️ Dzień dobry! Zapraszamy na poranną kawę.";
-        } else if (hour < 18) {
-            message = "☕ Miłego popołudnia! Czas na pyszną kawę.";
-        } else {
-            message = "🌙 Dobry wieczór! Zrelaksuj się przy filiżance kawy.";
-        }
-
-        alert(message);
-
         window.addEventListener("load", () => {
             const btn = document.createElement("button");
 
