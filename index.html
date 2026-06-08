@@ -6,7 +6,6 @@
     <title>Cat Café</title>
 
     <link rel="stylesheet" href="indexStyle.css">
-    <link rel="script" href="scriptIndex.js">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +13,54 @@
 
 </head>
 <body>
+
+    <script>
+        window.addEventListener("load", () => {
+        const hour = new Date().getHours();
+
+        let message;
+
+        if (hour < 12) {
+            message = "☀️ Dzień dobry! Zapraszamy na poranną kawę.";
+        } else if (hour < 18) {
+            message = "☕ Miłego popołudnia! Czas na pyszną kawę.";
+        } else {
+            message = "🌙 Dobry wieczór! Zrelaksuj się przy filiżance kawy.";
+        }
+
+        alert(message);
+        });
+
+        window.addEventListener("load", () => {
+            const btn = document.createElement("button");
+
+            btn.textContent = "⬆";
+            btn.style.backgroundColor = "#e2d3bf";
+            btn.style.color = "#6F4E37";
+            btn.style.position = "fixed";
+            btn.style.bottom = "20px";
+            btn.style.right = "20px";
+            btn.style.padding = "10px 15px";
+            btn.style.fontSize = "20px";
+            btn.style.border = "none";
+            btn.style.borderRadius = "50%";
+            btn.style.cursor = "pointer";
+            btn.style.zIndex = "9999";
+
+            document.body.appendChild(btn);
+
+            btn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+
+    </script>
+
+
+
 
     <header>
         <marquee>
