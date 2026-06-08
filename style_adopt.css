@@ -1,0 +1,78 @@
+body{
+  background-color: #d9c7b0 ;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+title{
+   color: rgb(255, 255, 255);
+}
+
+    #baner {
+    background-image: url("catss.jpg");
+    color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    height: 150px;
+    clear: both;
+    border-radius: 3%;
+    font-size: 78px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tekst{
+    color: white;
+    font-size: 29px;
+    text-align: center;
+     display: flex;
+    justify-content: center;
+    margin: 16px;
+    padding: 1px;
+    background-color: #b9a28e;
+   border-radius: 12px;
+    opacity: 0.8;
+}
+
+#kotydo{
+    color:white;
+    text-align: center;
+    font-size:55px;
+    background-color: #b9a28e;   
+    padding: 7px 7px;
+    width: 280px;
+    margin: auto;
+    border-radius: 19px;
+        
+}
+ .galeria {
+    margin: 33px;
+    display: flex;
+    gap: 50px; 
+    flex-wrap: wrap; 
+}
+
+.galeria img {
+    width: 410px;
+    height: auto;
+    border-radius: 8px;
+    transition:  0.8s;
+}
+.galeria :hover{
+        transform: scale(1.1);
+}
+.foto{
+    text-align: center;
+    color:#7c644d;
+    font-size: 22px;
+}
+
+.kontakt{
+    font-size: 22px;
+    text-align: center;
+    color: #7c644d;
+}
+.hr{
+    border: none;
+    height: 2px;
+    background-color:#887360;
+}

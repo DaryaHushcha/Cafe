@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Cafe - Menu</title>
+  <link rel="stylesheet" href="styl02.css">
+
+</head>
+<body>
+
+  <header>
+    <h1>Menu</h1>
+  </header>
+
+  <div class="calymenu">
+
+    <div class="left">
+
+      <h2 class="section-title">Kawy</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Espresso </div>
+          <div class="item-dol">Mocne i aromatyczne</div>
+        </div>
+        <div class="item-cena">10 zł</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Latte </div>
+          <div class="item-dol">Delikatne, mleczne, kremowe</div>
+        </div>
+        <div class="item-cena">15 zł</div>
+      </div>
+
+      <h2 class="section-title">Herbaty</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Herbata Czarna </div>
+          <div class="item-dol">Klasyczna, rozgrzewająca</div>
+        </div>
+        <div class="item-cena">12 zł</div>
+      </div>
+      <div class="item">
+        <div>
+          <div class="item-name">Herbata Owocowa </div>
+          <div class="item-dol">Mix owoców, rozgrzewająca</div>
+        </div>
+        <div class="item-cena">12 zł</div>
+      </div>
+
+      <h2 class="section-title">Desery</h2>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Sernik </div>
+          <div class="item-dol">Kremowy i lekki</div>
+        </div>
+        <div class="item-cena">16 zł</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="item-name">Brownie </div>
+          <div class="item-dol">Gęste, czekoladowe</div>
+        </div>
+        <div class="item-cena">17 zł</div>
+      </div>
+<div class="item">
+        <div>
+          <div class="item-name">Cisto malinowe </div>
+          <div class="item-dol">Kremowy, z kawalkami maliny</div>
+        </div>
+        <div class="item-cena">17 zł</div>
+      </div>
+    </div>
+
+    <div class="right">
+
+      <div class="js-box" id="jsText">Witaj w kociej kawiarni!</div>
+
+      <div class="photo-box">
+        <img id="slider" src="" style="width:100%; border-radius:10px;">
+        <div class="photo-text">Kawa - napój sporządzany z palonych, a następnie zmielonych <br>
+          lub poddanych instantyzacji ziaren kawowca,zwykle podawany na gorąco. Pochodzi z Etiopii,<br>
+           w Europie pojawiła się około XVI wieku. Jedna z <br>najpopularniejszych używek na świecie i główne źródło kofeiny.</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const teksty = [
+      "Koty dzisiaj są wyjatkowo towarzyskie!",
+      "Promocja: druga kawa -40%",
+      "W tym miesiacu zaodoptowali 3 koty!",
+      "Dziś polecamy brownie i latte!",
+      "Nowy kot:Lusia",
+      "Kup dowolna kawę i dostan herbatę za 5 zł!"
+    ];
+
+    function zmienTekst() {
+      const box = document.getElementById("jsText");
+      const los = Math.floor(Math.random() * teksty.length);
+      box.textContent = teksty[los];
+    }
+
+    setInterval(zmienTekst, 3000);
+    const photos = [
+    "https://static.polityka.pl/_resource/res/path/f0/ab/f0ab4da7-0d7a-4acf-a4cb-0a7520dac6bb",
+    "kawiarnia.jpg",
+    "kotykawa.jpg",
+    "kawka.jpg",
+    "kawka2.jpg"
+];
+
+let index = 0;
+let intervalId = null;
+
+function pokazZdjecie() {
+    const img = document.getElementById("slider");
+    img.src = photos[index];
+}
+
+function nastepne() {
+    index++;
+    if (index >= photos.length) index = 0;
+    pokazZdjecie();
+}
+
+function autoPlay() {
+    if (intervalId !== null) return;
+    intervalId = setInterval(() => {
+        nastepne();
+    }, 3000);
+}
+
+window.onload = () => {
+    pokazZdjecie();
+    autoPlay();
+};
+
+  </script>
+
+</body>
+</html>
+
