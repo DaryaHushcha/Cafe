@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto auto auto auto auto;    
+    grid-template-areas:
+        "header header"
+        "aside  main"
+        "about  about"
+        "gallery gallery"
+        "contact contact"
+        "quest quest"
+        "adres adres"
+        "kontakt kontakt";
+    gap: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    color:#6F4E37;
+    
+}
+
+header {
+    grid-area: header;
+    background-color: #d9c7b0;
+    color: #6F4E37;
+    font-weight: 400;
+    margin: 0;
+    padding: 3px;
+    height: 30px;
+}
+
+marquee {
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+aside {
+    display: flex;
+    justify-content: center;
+
+    grid-area: aside;
+    background-color: #faf7f4;
+    border-radius: 10px;
+    min-height: calc(100vh - 80px);
+    width: 70%;
+    box-sizing: border-box;
+    position: relative;
+
+    padding: 50px 30px;
+    color:#6F4E37;
+    border-radius: 0px;
+    border-right: 2px solid #d9c7b0;
+}
+
+#menuDiv a {
+    display: block;
+    margin-bottom: 10px;
+    color: #6F4E37;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#menuDiv a:hover {
+    color: #0f0600;
+}
+
+#menuDiv img {
+    margin-right: 20px;
+}
+
+#social{
+    position: absolute;
+    bottom: 80px;
+}
+
+#social a{
+    margin-right:  20px;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#logo {
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+}
+
+#oNas{
+    grid-area: about;
+    flex-direction: column;
+    width: 100%;
+    min-height: 110vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color:  #d9c7b0;
+    font-size: 25px;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#oNas p {
+    width: 45%;
+}
+
+#oNas button{
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a67c52;
+    color: #f7F3EE;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#oNas button:hover{
+    background-color: #6F4E37;
+    transition: 0.5s;
+    width: 165px;
+    height: 44px;
+}
+
+#galeria{
+    grid-area: gallery;
+    width: 100%;
+    min-height: 50vh;
+    padding: 10vh 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#galeria h1{
+    color: #6F4E37;
+    font-size: 40px;
+    width: 100%;
+    margin: 12vh 0;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 25px;
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 20px;
+    display: block;
+}
+
+
+#questions{
+    grid-area: quest;
+    width: 100%;
+    min-height: 106vh;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    background-color: #d9c7b0;
+}
+
+#questions h1{
+    margin: 50px 0;
+    margin-top: -30px;
+}
+
+.questionsDiv{
+    text-align: left;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.pytanie{
+    font-weight: 600;
+}
+
+.odpowiedz{
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    background-color: #e2d3bf;
+    border-radius: 10px;
+}
+
+
+#adres{
+    grid-area: adres;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 150px;
+}
+
+.adresInfo{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+
+#kontakt {
+    grid-area: kontakt;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #d9c7b0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    background-color: #e2d3bf;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a67c52;
+    color: #f7F3EE;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #6F4E37;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.daneKontakowe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
