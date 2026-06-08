@@ -20,6 +20,21 @@ title{
     justify-content: center;
     align-items: center;
 }
+.back{
+      position: absolute;
+      left: 20px;
+      text-decoration: none;
+      font-size: 33px;
+      color:#ffffff;
+       background-color: #5c4b36 ;
+       border-radius: 3%;
+    }
+.baner a{
+      color: #6b5a4a;
+      text-align: left;
+      display: block;
+      margin-left: 20px;
+    }
 #tekst{
     color: white;
     font-size: 29px;
